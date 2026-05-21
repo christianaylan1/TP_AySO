@@ -1,0 +1,106 @@
+ssh-keygen
+cat $HOME/.ssh/*.pub
+cd
+mkdir repogit
+cd repogit
+git clone git@github.com:christianaylan1/TP_AySO.git
+cd TP_AySO/
+pwd
+ls -l
+cat /etc/passwd
+man grep
+grep UBUNTU /etc/passwd
+grep ubuntu /etc/passwd
+man grep 
+grep -i Ubuntu /etc/passwd
+man awk
+cat /etc/passwd | grep -i  "Ubuntu" | awk -F ':' '{print $2}' > datos_usuario.txt
+whoami
+echo “Usuario=$(whoami)” >> datos_usuario.txt 
+cat datos_usuario.txt 
+git add .
+git config --global user.email "christianaylan1@gmail.com"
+git config --global user.name "christianaylan1"
+git commit -m "ADD: agregado 1er ejercicio sobre datos_usuarios.txt"
+git status 
+grep "model name" /proc/cpuinfo 
+grep "model name" /proc/cpuinfo | head -n1 >> info_pc.txt
+cat info_pc.txt 
+git add .
+git commit -m "feat: Añadiendo información de CPU"
+man grep
+cat /etc/passwd | grep -v "nologin"
+man sort 
+cat /etc/passwd | grep -v "nologin" | head -n 10 | sort -k 7 > lista_ordenada.txt
+cat lista_ordenada.txt 
+cat /etc/passwd | grep -v "nologin" | sort -k 7 | head -n 10 
+man sort 
+cat /etc/passwd | grep -v "nologin" | sort -t ":"
+cat /etc/passwd | grep -v "nologin" | sort -t ":" -k 7
+cat /etc/passwd | grep -v "nologin" | sort -t ':' -k 7
+cat /etc/passwd | grep -v "nologin" | sort -t ':' -k 7 | head -n 10
+cat /etc/passwd | grep -v "nologin" | sort -t ':' -k 7 | head -n 10 > lista_ordenada.txt 
+cat lista_ordenada.txt 
+git add .
+git commit -m "feat: Añadiendo información de CPU"
+git commit -m “ADD: Listado de usuarios ordenada”
+man commit
+commit --help
+git commit --help
+git commit -amend -m "ADD: Listado de usuarios ordenada"
+git commit --amend -m "ADD: Listado de usuarios ordenada"
+cat lista_ordenada.txt 
+cat >> README.md << fin
+Alumno : Christian Isaias Aylan
+División: 116
+fin
+
+cat > README.md << fin
+Alumno: Christian Isaias Aylan
+División: 116
+Turno: Mañana
+fin
+
+cat README.md 
+git add .
+git commit -m "docs: Agregando información del alumno al README"
+sudo apt install tree
+man mkdir
+mkdir -p TP1/{{arquitectura,so}/Clase{1..5},so/Clase6}
+cd
+tree TP1
+sudo apt install tree
+tree TP1
+sudo apt update
+tree TP1
+sudo apt install tree
+tree TP1
+cd repogit/TP_AySO/
+tree TP1
+man rm
+rm -rf TP1
+tree TP1
+cd
+pwd
+mkdir -p TP1/{{arquitectura,so}/Clase{1..5},so/Clase6}
+tree TP1
+cd repogit/TP_AySO/
+echo 'mkdir -p TP1/{{arquitectura,so}/Clase{1..5},so/Clase6}' > script_dir.sh
+cat script_dir.sh 
+ls -l
+man chmod
+chmod u+x script_dir.sh 
+ls -l
+git add .
+git commit -m "ADD: Añadiendo script"
+git push
+history -a
+cd ~
+ls -la
+cd repogit/TP_AySO/
+mv ~/.bash_history Historial_comandos.txt
+cp ~/.bash_history Historial_comandos.txt
+ls
+ls -la
+rm Historial_comandos.txt 
+history -a
